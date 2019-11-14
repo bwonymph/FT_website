@@ -706,6 +706,9 @@ a:focus {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	}
+	.botfot {
+		opacity: 0;
+	}
 }
 
 
