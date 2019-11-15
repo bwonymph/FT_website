@@ -74,7 +74,10 @@
   								method="POST" 
 								target="iframe_fish"
 								onsubmit="sent_fish"><br>
-								Email Address: <input id="Email" type="email" name="entry.980185531" placeholder="Email"><br> <br>
+								<p class="email">
+						        <input name="entry.980185531" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+						      	</p>
+
 								Select Newsletters: <br>
 								<input type="checkbox" name="entry.1392845803" id="a2" value="Fisherman's Tribune"/>
 									<label for="a2"> Fisherman's Tribune</label>
@@ -83,12 +86,13 @@
 								<input type="checkbox" name="entry.1392845803" id="a4" value="Fly Fisherman's Tribune"/>
 								  	<label for="a4"> Fly Fishing</label><br>
 								<input id="subscribe" type="submit" value="Subscribe">
-								</form>
+								</form>							
 							</div>
 							<div id="form2" style="display:none;">
-								<h2 class="info">You successfully signed up! <br> <br>Tight lines!</h2>
 								<br>
-								<button id="subscribe2">Sign up another email</button>
+								<h2 class="info" style="font-family: 'Shrikhand', cursive; color:#21252a;">You successfully signed up! <br>
+									<h6>Check your email weekly for the latest fishing news!</h6><br>
+								<button class="butstyle" id="subscribe2">Sign up another email</button>
 							</div>
 						</div>
 					</div>
