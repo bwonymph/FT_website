@@ -65,10 +65,11 @@
 						</div>
 						<div class="col-md-2"></div> -->
 						<div id="info" class="col-md-5 boxtext featured-list__item1">
+							<div id="form1">
 								<iframe name="iframe_fish" id="iframe_fish" style="display:none;" onload="if(typeof sent_fish!='undefined'){window.location='https://google.com';}">
 								</iframe>
-								<h2 class="info">The Trusted Fishing Newsletter</h2>
-								<h6>If you want to subscribe to our free newsletter, please submit the form below.</h6>
+								<h2 class="info" style="font-family: 'Shrikhand', cursive; color:#21252a;">The Trusted Fishing Newsletter</h2>
+								<h6>To receive our free newsletters and the latest fishing news, please submit the form below.</h6>
 								<form id="subscribeForm"     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf4KOGtnuNXEBRoU-P_-H5mAc3pVEbws8FEsjP8kgUKYSJkqQ/formResponse" 
   								method="POST" 
 								target="iframe_fish"
@@ -76,13 +77,19 @@
 								Email Address: <input id="Email" type="email" name="entry.980185531" placeholder="Email"><br> <br>
 								Select Newsletters: <br>
 								<input type="checkbox" name="entry.1392845803" id="a2" value="Fisherman's Tribune"/>
-									<label for="a2">Fisherman's Tribune</label>
+									<label for="a2"> Fisherman's Tribune</label>
 								<input type="checkbox" name="entry.1392845803" id="a3"value="Surf Fisherman's Tribune"/>
-									<label for="a3">Surf Fishing</label>
+									<label for="a3"> Surf Fishing</label>
 								<input type="checkbox" name="entry.1392845803" id="a4" value="Fly Fisherman's Tribune"/>
-								  	<label for="a4">Fly Fishing</label>
+								  	<label for="a4"> Fly Fishing</label><br>
 								<input id="subscribe" type="submit" value="Subscribe">
 								</form>
+							</div>
+							<div id="form2" style="display:none;">
+								<h2 class="info">You successfully signed up! <br> <br>Tight lines!</h2>
+								<br>
+								<button id="subscribe2">Sign up another email</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -127,6 +134,21 @@
 			    $("info").fadeIn();
 			  });
 			});
+			$('#subscribe').on('click',function(){
+			    if($('#form1').css('display')!='none'){
+			    $('#form2').show().siblings('div').hide();
+			    }else if($('#form2').css('display')!='none'){
+			        $('#form1').show().siblings('div').hide();
+			    }
+			});
+			$('#subscribe2').on('click',function(){
+			    if($('#form2').css('display')!='none'){
+			    $('#form1').show().siblings('div').hide();
+			    }else if($('#form1').css('display')!='none'){
+			        $('#form2').show().siblings('div').hide();
+			    }
+			});
 		</script>
+
 	</body>
 </html>

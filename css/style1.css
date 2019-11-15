@@ -733,3 +733,14 @@ a:focus {
   font-size: 16px;
   margin: 4px 2px;
 }
+
+input[type=submit] {
+    border: 1px solid #f44c0e;
+    color: #fff;
+    background: tomato;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+input[type=submit]:hover {
+    background: #f44c0e;
+}
